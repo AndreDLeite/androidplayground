@@ -5,8 +5,12 @@
     android:id="@+id/navigation_home"
     app:startDestination="@id/homeFragment">
 
-    <include app:graph="@navigation/navigation_camera" />
     <include app:graph="@navigation/navigation_components" />
+
+    <activity
+        android:id="@+id/nav_graph_camera_activity"
+        android:name="adl.appture.playground.camera.CameraActivity"
+        android:label="Camera Activity"/>
 
     <fragment
         android:id="@+id/homeFragment"
@@ -16,7 +20,7 @@
 
         <action
             android:id="@+id/action_home_fragment_to_camera_nav_graph"
-            app:destination="@id/navigation_camera" />
+            app:destination="@id/nav_graph_camera_activity" />
 
         <action
             android:id="@+id/action_home_fragment_to_components_nav_graph"

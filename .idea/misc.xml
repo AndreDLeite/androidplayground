@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/fragment_camera_main.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/fragment_home_main.xml" value="0.38958333333333334" />
         <entry key="app/src/main/res/layout/item_home_options_card.xml" value="0.38958333333333334" />
+        <entry key="components/src/main/res/layout/fragment_components_selection.xml" value="0.3151041666666667" />
         <entry key="components/src/main/res/layout/item_expandable_list.xml" value="0.38958333333333334" />
         <entry key="components/src/main/res/layout/item_expandable_topics_info.xml" value="0.38958333333333334" />
         <entry key="components/src/main/res/layout/view_expandable_topics.xml" value="0.38958333333333334" />
