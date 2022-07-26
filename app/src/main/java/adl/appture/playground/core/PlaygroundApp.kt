@@ -1,5 +1,6 @@
 package adl.appture.playground.core
 
+import adl.appture.playground.di.HomeViewModules
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
@@ -9,7 +10,6 @@ class PlaygroundApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         setupKoinInjections()
     }
 
@@ -17,6 +17,10 @@ class PlaygroundApp: Application() {
         startKoin {
             androidContext(this@PlaygroundApp)
             androidFileProperties()
+
+            modules(
+                HomeViewModules().invoke()
+            )
         }
     }
 

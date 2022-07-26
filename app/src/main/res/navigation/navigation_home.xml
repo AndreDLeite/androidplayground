@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/homeFragment">
+
+    <include app:graph="@navigation/navigation_camera" />
+    <include app:graph="@navigation/navigation_components" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="adl.appture.playground.ui.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home_main">
+
+        <action
+            android:id="@+id/action_home_fragment_to_camera_nav_graph"
+            app:destination="@id/navigation_camera" />
+
+        <action
+            android:id="@+id/action_home_fragment_to_components_nav_graph"
+            app:destination="@id/navigation_components" />
+    </fragment>
+</navigation>

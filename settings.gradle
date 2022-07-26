@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "playground"
 include ':app'
+include ':components'
+include ':extensions'
