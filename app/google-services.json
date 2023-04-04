@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "121084834129",
+    "project_id": "androidplayground-782e2",
+    "storage_bucket": "androidplayground-782e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121084834129:android:59ae40c17462d42111a370",
+        "android_client_info": {
+          "package_name": "adl.appture.playground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121084834129-0lqfphb97acdqh3n5njgrs1j1a7pqvtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9P64vqLc_wY-C8_F8Mm8Z2rt6XGpSSQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121084834129-0lqfphb97acdqh3n5njgrs1j1a7pqvtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

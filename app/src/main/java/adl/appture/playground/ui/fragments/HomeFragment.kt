@@ -41,7 +41,11 @@ class HomeFragment : Fragment(R.layout.fragment_home_main), HomeActionsAdapter.C
     override fun onCardClicked(cardType: HomeCardEnum) {
         when(cardType) {
             HomeCardEnum.CAMERA -> navigateToCameraModule()
-            HomeCardEnum.COMPONENTS -> navigateToComponentsModel()
+            HomeCardEnum.COMPONENTS -> {
+                // Adicionar o start navigation correto no navigation_components
+                //navigateToComponentsModel()
+            }
+            HomeCardEnum.FIREBASE -> navigateToFirebaseModule()
         }
     }
 
@@ -51,6 +55,10 @@ class HomeFragment : Fragment(R.layout.fragment_home_main), HomeActionsAdapter.C
 
     private fun navigateToComponentsModel() {
         findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToComponentsNavGraph())
+    }
+
+    private fun navigateToFirebaseModule() {
+        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToFirebaseNavGraph())
     }
 
 }

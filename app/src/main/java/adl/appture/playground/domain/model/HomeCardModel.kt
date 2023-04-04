@@ -9,4 +9,5 @@ data class HomeCardModel(
 enum class HomeCardEnum {
     CAMERA,
     COMPONENTS,
+    FIREBASE,
 }

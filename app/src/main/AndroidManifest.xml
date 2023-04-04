@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <service
+            android:name=".firebase.services.FirebaseServices"
+            android:stopWithTask="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="adl.appture.playground"
@@ -28,7 +37,12 @@
 
         <activity
             android:name=".camera.CameraActivity"
-            android:exported="true">
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".firebase.FirebaseActivity"
+            android:exported="false">
         </activity>
 
         <activity

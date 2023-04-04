@@ -25,6 +25,7 @@ class HomeViewModel: ViewModel() {
                 listOf(
                     HomeCardModel(cardName = "Camera",cardColor = Color.parseColor("#32c7b8"), cardType = HomeCardEnum.CAMERA),
                     HomeCardModel(cardName = "Componentes",cardColor = Color.parseColor("#218a7f"), cardType = HomeCardEnum.COMPONENTS),
+                    HomeCardModel(cardName = "Firebase",cardColor = Color.parseColor("#79af56"), cardType = HomeCardEnum.FIREBASE),
                 )
             )
         }

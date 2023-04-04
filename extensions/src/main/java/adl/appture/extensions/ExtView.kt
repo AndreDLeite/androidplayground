@@ -19,3 +19,9 @@ val View.gone: View
         visibility = View.GONE
         return this
     }
+
+fun hideViewsWithGone(views: List<View>) {
+    views.forEach {
+        it.visibility = View.VISIBLE
+    }
+}

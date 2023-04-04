@@ -12,6 +12,11 @@
         android:name="adl.appture.playground.camera.CameraActivity"
         android:label="Camera Activity"/>
 
+    <activity
+        android:id="@+id/nav_graph_firebase_activity"
+        android:name="adl.appture.playground.firebase.FirebaseActivity"
+        android:label="Firebase Activity"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="adl.appture.playground.ui.fragments.HomeFragment"
@@ -25,5 +30,9 @@
         <action
             android:id="@+id/action_home_fragment_to_components_nav_graph"
             app:destination="@id/navigation_components" />
+
+        <action
+            android:id="@+id/action_home_fragment_to_firebase_nav_graph"
+            app:destination="@id/nav_graph_firebase_activity" />
     </fragment>
 </navigation>
