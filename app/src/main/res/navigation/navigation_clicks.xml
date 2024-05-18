@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_clicks_main"
+    android:id="@+id/navigation_clicks">
+
+    <fragment
+        android:id="@+id/fragment_clicks_main"
+        android:name="adl.appture.exampleclicks.ui.fragment.ClicksMainFragment"
+        android:label="ClicksMainFragment"
+        tools:layout="@layout/fragment_clicks_main" >
+        <action
+            android:id="@+id/action_fragment_clicks_main_to_fragment_clicks_success_navigation"
+            app:destination="@id/fragment_clicks_success_navigation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_clicks_success_navigation"
+        android:name="adl.appture.exampleclicks.ui.fragment.ClicksSuccessFragment"
+        android:label="ClicksSuccessFragment"
+        tools:layout="@layout/fragment_clicks_success" />
+
+</navigation>

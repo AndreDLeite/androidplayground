@@ -1,5 +1,7 @@
 package adl.appture.playground.core
 
+import adl.appture.exampleclicks.di.ExampleClicksDI
+import adl.appture.exampleusecases.di.ExamplesUseCaseDI
 import adl.appture.playground.di.HomeViewModules
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +21,9 @@ class PlaygroundApp: Application() {
             androidFileProperties()
 
             modules(
-                HomeViewModules().invoke()
+                HomeViewModules().invoke(),
+                ExamplesUseCaseDI.module,
+                ExampleClicksDI.module,
             )
         }
     }

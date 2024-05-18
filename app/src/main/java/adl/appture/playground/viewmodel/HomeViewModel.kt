@@ -12,8 +12,7 @@ import kotlinx.coroutines.launch
 class HomeViewModel: ViewModel() {
 
     private val _homeCards = MutableLiveData<List<HomeCardModel>>()
-    val homeCards: LiveData<List<HomeCardModel>>
-        get() = _homeCards
+    val homeCards: LiveData<List<HomeCardModel>> = _homeCards
 
     init {
         generateHomeCards()
@@ -26,6 +25,7 @@ class HomeViewModel: ViewModel() {
                     HomeCardModel(cardName = "Camera",cardColor = Color.parseColor("#32c7b8"), cardType = HomeCardEnum.CAMERA),
                     HomeCardModel(cardName = "Componentes",cardColor = Color.parseColor("#218a7f"), cardType = HomeCardEnum.COMPONENTS),
                     HomeCardModel(cardName = "Firebase",cardColor = Color.parseColor("#79af56"), cardType = HomeCardEnum.FIREBASE),
+                    HomeCardModel(cardName = "Clicks Example",cardColor = Color.parseColor("#d1c252"), cardType = HomeCardEnum.CLICKS),
                 )
             )
         }

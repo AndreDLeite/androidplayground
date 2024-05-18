@@ -10,4 +10,5 @@ enum class HomeCardEnum {
     CAMERA,
     COMPONENTS,
     FIREBASE,
+    CLICKS,
 }

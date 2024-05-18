@@ -17,6 +17,11 @@
         android:name="adl.appture.playground.firebase.FirebaseActivity"
         android:label="Firebase Activity"/>
 
+    <activity
+        android:id="@+id/nav_graph_clicks_activity"
+        android:name="adl.appture.exampleclicks.ClicksActivity"
+        android:label="Clicks Activity"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="adl.appture.playground.ui.fragments.HomeFragment"
@@ -34,5 +39,9 @@
         <action
             android:id="@+id/action_home_fragment_to_firebase_nav_graph"
             app:destination="@id/nav_graph_firebase_activity" />
+
+        <action
+            android:id="@+id/action_home_fragment_to_clicks_nav_graph"
+            app:destination="@id/nav_graph_clicks_activity" />
     </fragment>
 </navigation>
