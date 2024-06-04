@@ -2,7 +2,7 @@
 
 ## Hi there 👋🏻
 
-This is my repo for †esting and developing new functionalities and concepts that I find interesting in Android development.
+This is my repo for testing and developing new functionalities and concepts that I find interesting in Android development.
 
 ## Some notes:
 - Please make sure you're using SDK 33+ to run this repo.
