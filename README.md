@@ -6,7 +6,6 @@ This is my repo for testing and developing new functionalities and concepts that
 
 ## Some notes:
 - Please make sure you're using SDK 33+ to run this repo.
-- I'm planing on expading this repository to use other dep
 
 
 ## In the future:
