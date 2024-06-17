@@ -1,10 +1,12 @@
 package adl.appture.uistates.ui.fragments
 
+import adl.appture.extensions.launchWhenResumedFromFragment
 import adl.appture.uistates.ui.states.UiState
 import adl.appture.uistates.ui.viewmodel.UiStateViewModel
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UiStateFragment : Fragment() {
@@ -18,18 +20,36 @@ class UiStateFragment : Fragment() {
     }
 
     private fun setupViewObservers() {
-        viewModel.informationState.observe(viewLifecycleOwner) { information ->
-            information ?: return@observe
+        launchWhenResumedFromFragment {
+            viewModel.sharedStateFlow.collectLatest { uiState ->
+                when (uiState) {
+                    is UiState.Loading -> {
 
-            when(information) {
-                is UiState.Loading -> {
-                    //TODO: Set UI Loading state
+                    }
+
+                    is UiState.Success -> {
+
+                    }
+
+                    is UiState.Failure -> {
+
+                    }
                 }
-                is UiState.Success -> {
-                    //TODO: Set UI Success state
-                }
-                is UiState.Failure -> {
-                    //TODO: Set UI Failure state
+            }
+
+            viewModel.stateFlowResponse.collectLatest { uiState ->
+                when (uiState) {
+                    is UiState.Loading -> {
+
+                    }
+
+                    is UiState.Success -> {
+
+                    }
+
+                    is UiState.Failure -> {
+
+                    }
                 }
             }
         }

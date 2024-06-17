@@ -1,19 +1,18 @@
 package adl.appture.uistates.di
 
 import adl.appture.shared.factory.HTTPClient
-import adl.appture.shared.providers.UrlProviders.UI_STATE_BASE_URL
-import adl.appture.uistates.data.api.service.UiStateService
+import adl.appture.shared.providers.UrlProviders
+import adl.appture.uistates.data.remote.api.service.UiStateService
+import adl.appture.uistates.data.remote.networking.UiStateServiceImpl
 import adl.appture.uistates.data.repository.UiStateRepositoryImpl
 import adl.appture.uistates.domain.repository.UiStateRepository
 import adl.appture.uistates.domain.usecases.FetchPlaceHolderUseCase
 import adl.appture.uistates.domain.usecases.FetchPlaceHolderUseCaseImpl
 import adl.appture.uistates.ui.viewmodel.UiStateViewModel
 import kotlinx.coroutines.Dispatchers
-import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.core.qualifier.named
-import java.util.concurrent.TimeUnit
 
 object UiStateInjects {
 
@@ -25,14 +24,12 @@ object UiStateInjects {
     }
 
     private fun getServices(module: Module) = with(module) {
-        single(named("UiStateService")) {
-            HTTPClient.create(
-                OkHttpClient.Builder()
-                    .readTimeout(60, TimeUnit.SECONDS)
-                    .connectTimeout(60, TimeUnit.SECONDS)
-                    .build(),
-                UI_STATE_BASE_URL,
-                UiStateService::class
+        single<UiStateService>(named("UiStateService")) {
+            UiStateServiceImpl(
+                HTTPClient.create(
+                    UrlProviders.BASE_DUMMY_URL,
+                    UiStateService::class
+                )
             )
         }
     }
