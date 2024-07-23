@@ -11,4 +11,5 @@ enum class HomeCardEnum {
     COMPONENTS,
     FIREBASE,
     CLICKS,
+    VIEWS,
 }

@@ -1,9 +1,11 @@
 package adl.appture.extensions
 
-import java.time.format.DateTimeFormatter
+fun checkPlate(plate: String): Boolean {
+    return plate.isMercoSulPlate()
+}
 
-fun String.isMercosulPlate(carPlate: String): Boolean {
-    return Regex("[A-Z]{3}[0-9][0-9A-Z][0-9]{2}").matches(carPlate)
+fun String.isMercoSulPlate(): Boolean {
+    return Regex("[A-Z]{3}[0-9][0-9A-Z][0-9]{2}").matches(this)
 }
 
 fun String.isDayMonthYearTest(dateFormatter: String): Boolean {
