@@ -14,30 +14,6 @@ import kotlinx.coroutines.runBlocking
 import kotlin.system.measureTimeMillis
 
 class HomeViewModel : ViewModel() {
-
-    fun teste() = runBlocking {
-        val totalTime = measureTimeMillis {
-            val delay1 = async { delayFunction1() }
-            val delay2 = async { delayFunction2() }
-            val result1 = delay1.await()
-            val result2 = delay2.await()
-            println("TotalTime: ${result1 + result2} ms")
-        }
-        println("Done")
-    }
-
-    suspend fun delayFunction1(): Long {
-        val delayTime = 1000L
-        delay(delayTime)
-        return delayTime
-    }
-
-    suspend fun delayFunction2(): Long {
-        val delayTime = 500L
-        delay(delayTime)
-        return delayTime
-    }
-
     private val _homeCards = MutableStateFlow<List<HomeCardModel>>(listOf())
     val homeCards = _homeCards.asStateFlow()
 
@@ -73,6 +49,11 @@ class HomeViewModel : ViewModel() {
                         cardName = "Add view skeleton example",
                         cardColor = Color.parseColor("#f59740"),
                         cardType = HomeCardEnum.VIEWS
+                    ),
+                    HomeCardModel(
+                        cardName = "Shared Viewmodel Example",
+                        cardColor = Color.parseColor("#d140f5"),
+                        cardType = HomeCardEnum.SHARED_VIEW_MODEL
                     ),
                 )
         }

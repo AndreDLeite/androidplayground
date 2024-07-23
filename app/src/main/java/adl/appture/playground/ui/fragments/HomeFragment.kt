@@ -53,7 +53,13 @@ class HomeFragment : Fragment(R.layout.fragment_home_main), HomeActionsAdapter.C
             VIEWS -> {
                 navigateToViews()
             }
+
+            SHARED_VIEW_MODEL -> navigateToSharedViewModelExample()
         }
+    }
+
+    private fun navigateToSharedViewModelExample() {
+        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSharedViewmodelNavGraph())
     }
 
     private fun navigateToCameraModule() {

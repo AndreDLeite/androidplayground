@@ -1,6 +1,7 @@
 package adl.appture.playground.core
 
 import adl.appture.exampleclicks.di.ExampleClicksDI
+import adl.appture.examplesharedviewmodel.di.SharedViewModelDI
 import adl.appture.exampleusecases.di.ExamplesUseCaseDI
 import adl.appture.playground.di.HomeViewModules
 import adl.appture.uistates.di.UiStateDI
@@ -26,6 +27,7 @@ class PlaygroundApp: Application() {
                 ExamplesUseCaseDI.module,
                 ExampleClicksDI.module,
                 UiStateDI.module,
+                SharedViewModelDI.module,
             )
         }
     }

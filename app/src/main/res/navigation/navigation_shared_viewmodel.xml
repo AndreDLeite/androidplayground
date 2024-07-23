@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_shared_viewmodel_first"
+    android:id="@+id/navigation_shared_viewmodel">
+
+    <fragment
+        android:id="@+id/fragment_shared_viewmodel_first"
+        android:name="adl.appture.examplesharedviewmodel.ui.fragment.SharedFirstScreenFragment"
+        android:label="SharedFirstScreenFragment"
+        tools:layout="@layout/fragment_shared_viewmodel_first" >
+        <action
+            android:id="@+id/action_fragment_first_to_second_navigation"
+            app:destination="@id/fragment_shared_viewmodel_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_shared_viewmodel_second"
+        android:name="adl.appture.examplesharedviewmodel.ui.fragment.SharedSecondScreenFragment"
+        android:label="SharedSecondScreenFragment"
+        tools:layout="@layout/fragment_shared_viewmodel_second" />
+
+</navigation>

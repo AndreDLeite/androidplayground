@@ -12,4 +12,5 @@ enum class HomeCardEnum {
     FIREBASE,
     CLICKS,
     VIEWS,
+    SHARED_VIEW_MODEL,
 }

@@ -27,6 +27,11 @@
         android:name="adl.appture.views.ViewsActivity"
         android:label="Views Activity"/>
 
+    <activity
+        android:id="@+id/nav_graph_shared_viewmodel_activity"
+        android:name="adl.appture.examplesharedviewmodel.SharedViewModelExampleActivity"
+        android:label="Shared Viewmodel Activity"/>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="adl.appture.playground.ui.fragments.HomeFragment"
@@ -52,5 +57,9 @@
         <action
             android:id="@+id/action_home_fragment_to_views_nav_graph"
             app:destination="@id/nav_graph_views_activity" />
+
+        <action
+            android:id="@+id/action_home_fragment_to_shared_viewmodel_nav_graph"
+            app:destination="@id/nav_graph_shared_viewmodel_activity" />
     </fragment>
 </navigation>
